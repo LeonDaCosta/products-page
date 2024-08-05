@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Office Essentials</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div id="container">
+      <h1>Office Essentials</h1>
+      <div id="item-filters-container" class="grid ">
+        <div><button id="bPrice" class="sort-button" onclick="sortPrice()">Sort By Price</button></div>
+        <div><button id="bReview" class="sort-button" onclick="sortReview()">Sort By Review</button></div>
+        <div><button id="bName" class="sort-button" onclick="sortName()">Sort By Name</button></div>
+        <div><button id="bSavings" class="sort-button" onclick="sortSavings()">Sort By Saving</button></div>
+      </div>
+      <div id="item-container" class="grid">
+      </div>
+    </div>
+    <script src="js/index.js"></script>
+  </body>
+</html>
