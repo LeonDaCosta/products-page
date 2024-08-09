@@ -1,116 +1,126 @@
+:root {
+  --primary-orange: #fa4616;
+  --secondary-orange: #e43608;
+  --outline-orange: #942406;
+  --review-green: #3c7f53;
+}
+
 body {
-    font-family: Helvetica,Arial,sans-serif;
-    padding: 0;
-    margin: 0;
-  }
+  font-family: Helvetica,Arial,sans-serif;
+  padding: 0;
+  margin: 0;
+}
 
-  h1 {
-    color: #323232;
-  }
+h1 {
+  color: #323232;
+}
 
-  h3 {
-    min-height: 55px;
-  }
+h3 {
+  min-height: 55px;
+}
 
-  #container {
-    margin: auto;
-    max-width: 1200px;
-    padding: 10px;
-    min-width: 300px;
-  }
+#container {
+  margin: auto;
+  max-width: 1200px;
+  padding: 10px;
+  min-width: 300px;
+}
 
-  .sort-button {
-    border: 1px solid gray;
-    background-color: white;
-    width: 100%;
-    height: 50px;
-    cursor:pointer;
-    color: #323232;
-    font-size: 20px;
-    font-weight: bold;
-  }
+.sort-button {
+  border: 1px solid gray;
+  background-color: white;
+  width: 100%;
+  height: 50px;
+  cursor:pointer;
+  color: #323232;
+  font-size: 20px;
+  font-weight: bold;
+}
 
-  .sort-button:hover {
-    background-color: #e2e4e1;
-    color: #323232;
-  }
+.sort-button:hover {
+  background-color: #e2e4e1;
+  color: #323232;
+}
 
-  .sort-button-active {
-    background-color: gray;
-    color: #e2e4e1;
-  }
+.sort-button-active {
+  background-color: gray;
+  color: #e2e4e1;
+}
 
-  .add-button {
-    background: linear-gradient( to left, #fa4616 50%, #e43608 50% );
-    background-size: 200% 100%;
-    background-position: right bottom;
-    border: none;
-    width: 100%;
-    height: 50px;
-    cursor:pointer;
-    color: #fff;
-    font-size: 20px;
-    transition: all .25s ease-in-out;
+.add-button {
+  background: linear-gradient( to left, var(--primary-orange) 50%, var(--secondary-orange) 50% );
+  background-size: 200% 100%;
+  background-position: right bottom;
+  border: none;
+  width: 100%;
+  height: 50px;
+  cursor:pointer;
+  color: #fff;
+  font-size: 20px;
+  transition: all .25s ease-in-out;
+}
 
-  }
+.add-button:hover,:focus {
+  background-position: left bottom;
+}
 
-  .add-button:hover {
-    background-position: left bottom;
-  }
+.add-button:focus {
+  outline: 3px solid var(--outline-orange);
+}
 
-  .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill,minmax(250px, 1fr));
-      margin-bottom: 20px;
-      grid-gap: 10px;   
-  }
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px, 1fr));
+    margin-bottom: 20px;
+    grid-gap: 10px;   
+}
 
-  #item-filters-container > div {
-    padding: 0;
-  }
+#item-filters-container > div {
+  padding: 0;
+}
 
-  #item-container > div {
-    font-size: 20px;
-    padding: 1rem;
-    text-align: center;
-    border: 1px solid gray;
-    min-height: 300px;
-  }
+#item-container > div {
+  font-size: 20px;
+  padding: 1rem;
+  text-align: center;
+  border: 1px solid gray;
+  min-height: 300px;
+}
 
-  .item-image-container > img {
-    width: 100%;
-    overflow: hidden;
-    height: auto;
-    transition: all .3s ease-in-out;
-  }
+.item-image-container > img {
+  width: 100%;
+  overflow: hidden;
+  height: auto;
+  transition: all .3s ease-in-out;
+}
 
-  .item-image-container > img:hover   {
-    transform: scale(1.1);
-  }
+.item-image-container > img:hover {
+  transform: scale(1.1);
+}
 
-  .item-price-container {
-    color:#323232;
-    font-size: 20px;
-    margin-bottom: 5px;
-    min-height: 22px;
-  }
+.item-price-container {
+  color:#323232;
+  font-size: 20px;
+  margin-bottom: 5px;
+  min-height: 22px;
+}
 
-  .item-old-price-container{
-    color: #ec1c24;
-    font-size: 20px;
-    margin-bottom: 5px;
-    font-weight: bold;
-    min-height: 24px;
-  }
+.item-old-price-container{
+  color: #ec1c24;
+  font-size: 20px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  min-height: 24px;
+}
 
-  .item-old-price-container > span {
-    text-decoration: line-through;
-  }
-  
-  .item-score-container {
-    color: #3c7f53;
-    font-size: 18px;
-    margin-bottom: 5px;
-    font-weight: 600;
-    min-height: 22px;
-  }
+.item-old-price-container > span {
+  text-decoration: line-through;
+}
+
+.item-score-container {
+  color: var(--review-green);
+  font-size: 18px;
+  margin-bottom: 5px;
+  font-weight: 600;
+  min-height: 22px;
+}
