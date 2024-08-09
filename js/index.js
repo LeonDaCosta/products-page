@@ -27,10 +27,6 @@ const sortItems = (selector) => {
   localStorage.setItem(selector, sort);
   let direction = "";
 
-  console.log(selector)
-  console.log(productAttribute)
-  console.log(activeSortSelect)
-
   products["product_arr"].sort((a, b) => {
     if (sort == 1) {
       if (selector == "sort_savings") {
@@ -78,11 +74,6 @@ const sortPrice = () => {
   localStorage.setItem("sort_price", sort);
 
   let selector = "sort_price";
-
-  console.log(selector.indexOf("_"))
-
-  console.log(selector.substring(selector.indexOf("_") + 1))
-  console.log(selector.substring(selector.indexOf("_") + 1).charAt(0).toUpperCase())
 
   products["product_arr"].sort((a, b) => {
     if (sort == 1) {
@@ -222,7 +213,6 @@ const sortDirection = (selectedButton, direction) => {
 
   for (let i = 0; i < allButtons.length; i++) {
     if (allButtons[i].id != selectedButton.slice(1)) {
-      console.log("remove")
       if (allButtons[i].getElementsByTagName('i')[0]) {
         allButtons[i].removeChild(allButtons[i].getElementsByTagName('i')[0]);
       }
